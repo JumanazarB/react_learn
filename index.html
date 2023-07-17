@@ -15,20 +15,27 @@
 
     </div>
     <script type="text/babel">
+        const title = 'Welcome to my site'//React component ichida uzgaruvchilar elon qilishda js fayldagi bilan bir xil va uni Xml faylda shunchaki figurali qavs ichiga olgan holda ham ishlatveramiz. yani{title}.
+        const myFunction = ()=> console.log("men bosildim")
         const App = ()=>{
 
             //function
             //template
-            const title = 'Welcome to my site'//React component ichida uzgaruvchilar elon qilishda js fayldagi bilan bir xil va uni Xml faylda shunchaki figurali qavs ichiga olgan holda ham ishlatveramiz. yani{title}.
+            
             return (//RETURN QOIDALARIDAN BIRI RETURNDA BITTA XML TEG BULISHI MUMKIN AGAR IKKITA YOZSAK XATOLIK BERADI, yangi bir biriga o'rab emas tagma tag yozilishini nazarda tutdim.
                 <div>
                     <h1>{title}</h1>
                     <h3>this site to learn react.i am sorry, i to ...</h3>
                     <p>{new Date().toDateString()}</p>
-                </div>)//yana bir muhim qioda endi html teglariga klas berguncha, KLAS nomi 'class' o'rnga 'className' attributi bilan beriladi.
+                    <button onClick = {myFunction}>meni bos</button>
+                    <button onClick = {()=> console.log("arrow fuctionda yozish esdan chiqmasin")}>meni funcsiyam ichimda yozilgan</button>
+                </div>)//yana bir muhim qioda endi html teglariga klass berguncha, KLAS nomi 'class' o'rnga 'className' attributi bilan beriladi.
         }
         const root = ReactDOM.createRoot(document.getElementById('root'))
         root.render(<App/>)
+        /* 7-dars. funksiyalar va eventlar bilan ishlash.demak eventlarni endi xml variantdagi event nomlari bilan beramiz. masalan onClick xususiyati. demak <tegNomi onClick = {FunctionName}><tegNomi/> -- ahamiyat bergan bo'lsangiz bunda funcsiya chaqirilmedi yani nomini yozamiz lekin qavs ochib yopmaymiz, chunki agar qavs ochib yopadigan bo'lsak funksiya event bo'lmasdan ham ishlab ketaveradi. 
+            yana bitta usul bu event funksiyalarini xml format ichiga biriktirishdir, bu eventga funksiya yozishning inlayn usuli deyiladi. bunda asosan arrow funksiyadan foydalanishadi.*/
     </script>
+    
 </body>
 </html>
