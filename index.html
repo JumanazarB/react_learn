@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>React welcome</title>
+
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const App = ()=>{
+
+            //function
+            //template
+            const title = 'Welcome to my site'//React component ichida uzgaruvchilar elon qilishda js fayldagi bilan bir xil va uni Xml faylda shunchaki figurali qavs ichiga olgan holda ham ishlatveramiz. yani{title}.
+            return (//RETURN QOIDALARIDAN BIRI RETURNDA BITTA XML TEG BULISHI MUMKIN AGAR IKKITA YOZSAK XATOLIK BERADI, yangi bir biriga o'rab emas tagma tag yozilishini nazarda tutdim.
+                <div>
+                    <h1>{title}</h1>
+                    <h3>this site to learn react.i am sorry, i to ...</h3>
+                    <p>{new Date().toDateString()}</p>
+                </div>)//yana bir muhim qioda endi html teglariga klas berguncha, KLAS nomi 'class' o'rnga 'className' attributi bilan beriladi.
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>)
+    </script>
+</body>
+</html>
